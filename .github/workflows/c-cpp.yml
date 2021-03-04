@@ -13,6 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: prepare
+      run: add libcurl
     - name: configure
       run: ./configure --enable-scrypt --enable-gridseed
     - name: make
